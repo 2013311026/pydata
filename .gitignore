@@ -1,4 +1,4 @@
 *.py[cod]
 .ipynb_checkpoints
 .idea
-projects/temp.ipynb
+temp.ipynb
