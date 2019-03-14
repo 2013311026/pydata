@@ -33,11 +33,11 @@ class Mmspider(object):
             response = requests.get(url, params=params, headers=self.headers)
             return response.content
         except Exception as e:
-            print e
+            print (e)
 
     # 写入文件
     def write_file(self, data, page):
-        print page
+        print (page)
         filename = 'mm/' + page
         with open(filename, 'wb') as f:
             f.write(data)
@@ -59,7 +59,7 @@ class Mmspider(object):
             first_response = self.send_request(self.base_url)
             # 解析提取子链接 每一条单独的帖子
             first_data_list = self.parse_data(first_response, self.first_xpath)
-            print first_data_list
+            print (first_data_list)
 
             # 发送图片请求 保存图片到本地
             for img_url in first_data_list:
